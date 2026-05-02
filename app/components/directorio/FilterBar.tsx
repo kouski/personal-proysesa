@@ -1,22 +1,10 @@
 "use client";
 
-import { useState } from "react";
 import { useRouter, useSearchParams } from "next/navigation";
 
-interface FilterBarProps {
-    onViewChange?: (view: "grid" | "list") => void;
-    view?: "grid" | "list";
-}
-
-export default function FilterBar({ onViewChange, view = "grid" }: FilterBarProps) {
+export default function FilterBar() {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const [localView, setLocalView] = useState<"grid" | "list">(view);
-
-    const handleViewChange = (v: "grid" | "list") => {
-        setLocalView(v);
-        onViewChange?.(v);
-    };
 
     const handleFilterChange = (key: string, value: string) => {
         const params = new URLSearchParams(searchParams.toString());
@@ -60,32 +48,6 @@ export default function FilterBar({ onViewChange, view = "grid" }: FilterBarProp
                 <option value="vacaciones">Vacaciones</option>
                 <option value="inactivo">Inactivo</option>
             </select>
-
-            {/* View toggle */}
-            <div className="ml-auto flex items-center bg-slate-100 p-1 rounded-lg gap-0.5">
-                <button
-                    onClick={() => handleViewChange("grid")}
-                    className={`p-1.5 rounded transition-all ${localView === "grid"
-                        ? "bg-white shadow-sm text-blue-600"
-                        : "text-slate-400 hover:text-slate-600"
-                        }`}
-                    aria-label="Vista en cuadrícula"
-                >
-                    <span className="material-symbols-outlined text-[20px]">grid_view</span>
-                </button>
-                <button
-                    onClick={() => handleViewChange("list")}
-                    className={`p-1.5 rounded transition-all ${localView === "list"
-                        ? "bg-white shadow-sm text-blue-600"
-                        : "text-slate-400 hover:text-slate-600"
-                        }`}
-                    aria-label="Vista en lista"
-                >
-                    <span className="material-symbols-outlined text-[20px]">
-                        format_list_bulleted
-                    </span>
-                </button>
-            </div>
         </div>
     );
 }
