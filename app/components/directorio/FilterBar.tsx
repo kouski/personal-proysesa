@@ -46,7 +46,6 @@ export default function FilterBar({ onViewChange, view = "grid" }: FilterBarProp
                 <option value="Producción">Producción</option>
                 <option value="Administración">Administración</option>
                 <option value="Dirección">Dirección</option>
-                <option value="Diseño de Producto">Diseño de Producto</option>
             </select>
 
             {/* Status filter */}

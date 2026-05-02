@@ -5,7 +5,7 @@ export const employees: Employee[] = [
     id: "1",
     name: "Carlos Méndez",
     role: "Director Creativo",
-    department: "Diseño de Producto",
+    department: "Dirección",
     email: "c.mendez@proysesa.com",
     phone: "+34 912 345 678",
     status: "activo",
