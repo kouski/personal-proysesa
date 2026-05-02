@@ -40,9 +40,9 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
     const status = statusConfig[employee.status];
 
     return (
-        <article className="bg-white border border-slate-200 rounded-2xl p-6 hover:border-blue-300 hover:shadow-md transition-all duration-300 group cursor-pointer flex flex-col h-full">
+        <article className="bg-white border border-slate-200 rounded-2xl px-8 py-8 hover:border-blue-300 hover:shadow-md transition-all duration-300 group cursor-pointer flex flex-col h-full">
             {/* Top row: avatar + status badge */}
-            <div className="flex justify-between items-start mb-4">
+            <div className="flex justify-between items-start mb-5">
                 {employee.photo ? (
                     /* eslint-disable-next-line @next/next/no-img-element */
                     <img
@@ -65,7 +65,7 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
             </div>
 
             {/* Name & role */}
-            <div className="mb-4">
+            <div className="mb-5">
                 <h3 className="text-[20px] font-semibold leading-7 text-slate-900 group-hover:text-blue-600 transition-colors">
                     {employee.name}
                 </h3>
@@ -75,7 +75,7 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
             </div>
 
             {/* Details */}
-            <div className="pt-5 mt-auto border-t border-slate-100 space-y-3">
+            <div className="pt-5 mt-auto border-t border-slate-100 space-y-3.5">
                 <div className="flex items-center gap-3 text-slate-600">
                     <span className="material-symbols-outlined text-[16px] text-slate-400">
                         corporate_fare
