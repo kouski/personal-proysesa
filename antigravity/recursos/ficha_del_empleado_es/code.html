@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-container": "#fdfcff",
+                    "surface-tint": "#005ac2",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#004395",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "primary-container": "#2170e4",
+                    "outline-variant": "#c2c6d6",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary": "#0058be",
+                    "on-surface-variant": "#424754",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#d5e0f8",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#586377",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary": "#4d5d73",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#545f73",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-primary-container": "#fefcff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-container": "#66768d",
+                    "on-background": "#191c1e",
+                    "outline": "#727785",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "sidebar-width": "260px",
+                    "container-margin": "24px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "button": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "500"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h3": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; background-color: #f7f9fb; }
+        .material-symbols-outlined { font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; }
+    </style>
+</head>
+<body class="text-on-surface">
+<!-- SideNavBar (Authority Source: JSON) -->
+<aside class="bg-slate-900 fixed left-0 top-0 bottom-0 w-[260px] border-r border-slate-800 flex flex-col h-full py-6">
+<div class="px-6 mb-8">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 bg-blue-500 rounded flex items-center justify-center text-white">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<div>
+<h1 class="text-white font-black tracking-wide text-lg">Personnel Pro</h1>
+<p class="text-slate-400 text-xs uppercase tracking-widest">Enterprise Admin</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<!-- Active State: Profile (Manual determination based on page: Ficha del Empleado) -->
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">dashboard</span>
+<span class="font-sans text-[14px] leading-relaxed">Dashboard</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-sans text-[14px] leading-relaxed">Directory</span>
+</a>
+<a class="bg-slate-800 text-white border-l-4 border-blue-500 px-4 py-3 flex items-center gap-3 font-sans text-[14px] leading-relaxed scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-[14px] leading-relaxed">Profile</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<span class="font-sans text-[14px] leading-relaxed">New Hire</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">person_remove</span>
+<span class="font-sans text-[14px] leading-relaxed">Leavers</span>
+</a>
+</nav>
+<div class="mt-auto space-y-1 border-t border-slate-800 pt-4">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-sans text-[14px] leading-relaxed">Support</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all scale-[0.98] active:scale-95 duration-150" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-sans text-[14px] leading-relaxed">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar (Authority Source: JSON) -->
+<header class="bg-white fixed top-0 left-0 right-0 h-16 px-6 ml-[260px] flex justify-between items-center border-b border-slate-200 z-10">
+<div class="flex items-center gap-4">
+<span class="text-lg font-bold text-slate-900">HR Admin</span>
+<div class="h-6 w-px bg-slate-200 mx-2"></div>
+<div class="relative">
+<span class="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 material-symbols-outlined text-sm">search</span>
+<input class="pl-9 pr-4 py-1.5 bg-slate-50 border border-slate-200 rounded-lg text-sm w-64 focus:outline-none focus:border-blue-500 transition-colors" placeholder="Buscar empleados..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-4">
+<button class="text-slate-500 hover:bg-slate-50 p-2 rounded-full transition-colors active:opacity-80"><span class="material-symbols-outlined">notifications</span></button>
+<button class="text-slate-500 hover:bg-slate-50 p-2 rounded-full transition-colors active:opacity-80"><span class="material-symbols-outlined">help</span></button>
+<button class="text-slate-500 hover:bg-slate-50 p-2 rounded-full transition-colors active:opacity-80"><span class="material-symbols-outlined">settings</span></button>
+</div>
+<div class="flex items-center gap-3 border-l border-slate-200 pl-6">
+<img alt="Administrator profile photo" class="w-8 h-8 rounded-full object-cover" data-alt="Professional headshot of a senior HR Administrator in a clean corporate office environment. He is wearing a navy blue blazer and a white shirt, looking directly at the camera with a confident and helpful expression. The lighting is soft and even, highlighting a modern, trustworthy professional aesthetic with a soft-focus office background." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmveJwcatCVaAa68LBEHbCilI_1ieXkjvuW3PywOdcDnlIYXo7ocW4SMYZwJGt0ohVW8S2KRL6yYRE9pRZgU7kfS0OlPf7LYvS5khMc19jVXTQnkrdUdOeZtzL_pe20KCHFxKoYJDOasKvh6vFWy7I28gde66PG_ubZAYqpTqthiHzoarzoBJTxQzENLg_1DH88JogDBpC4srYwjdbfLxlgwjKo_EIMdYUW4rDcOILAasheghNq5t4s8wxPtOprp7J_HJ4NgghvZUE"/>
+<div class="hidden lg:block">
+<p class="font-sans text-sm font-medium tracking-tight text-slate-900">Admin Central</p>
+<p class="text-[11px] text-slate-500">Gestor de Personal</p>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Content Canvas -->
+<main class="ml-[260px] pt-16 min-h-screen bg-background">
+<div class="p-container-margin">
+<!-- Breadcrumbs -->
+<nav class="flex items-center gap-2 text-label-bold text-slate-400 mb-6 uppercase tracking-widest">
+<span>Directory</span>
+<span class="material-symbols-outlined text-[12px]">chevron_right</span>
+<span class="text-primary">Ficha del Empleado</span>
+</nav>
+<!-- Employee Hero Header (Bento Style) -->
+<div class="grid grid-cols-12 gap-gutter mb-lg">
+<div class="col-span-12 lg:col-span-8 bg-surface-container-lowest border border-outline-variant p-xl rounded-xl flex flex-col md:flex-row gap-xl items-start md:items-center">
+<div class="relative">
+<img alt="Alejandro García Moreno" class="w-32 h-32 rounded-full object-cover border-4 border-surface-container-high" data-alt="A detailed portrait of Alejandro García Moreno, a professional employee in his late 30s. He is wearing a modern charcoal grey suit without a tie, conveying a friendly yet corporate image. The photo is taken in a brightly lit studio setting with a clean, soft grey background that matches the minimalist corporate UI style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDVZZvWM4I3EYIYma7m5fDoRKjpNZjncAFB9mrCP9FWPiDV1PpO9FdfCIPFGfQE1yt4oWuZaWH88IWfH-u5ErywmBCGx_O43AIVfBTzHsKu038dTgaCPcmur3ycOfy2dNn0LJXVKTiKbWyLmkX6ZOMblbfr6dn7KRqDlpYGJsmOsPLeo89pcArOaf7S2jctQm4JkiKvMe1c5p5aOu1TZ1ccU0g5nIMZzslmZi_YAEgaqbV5dFxzxDug8cDwJfxCw-54rcDBDfHu_-F4"/>
+<div class="absolute bottom-1 right-1 w-6 h-6 bg-green-500 border-4 border-white rounded-full"></div>
+</div>
+<div class="flex-1">
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-md">
+<div>
+<h1 class="font-h1 text-h1 text-on-surface mb-1">Alejandro García Moreno</h1>
+<div class="flex items-center gap-2">
+<span class="bg-blue-50 text-blue-700 px-3 py-1 rounded-full text-label-bold">ACTIVO</span>
+<span class="text-slate-400 text-body-sm">• ID: EMP-4492</span>
+</div>
+</div>
+<div class="flex gap-sm">
+<button class="px-md py-sm bg-white border border-outline-variant text-on-surface rounded-lg font-button text-button hover:bg-slate-50 transition-colors flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">edit</span>
+                                    Editar Perfil
+                                </button>
+<button class="px-md py-sm bg-primary text-white rounded-lg font-button text-button hover:bg-primary-container transition-all flex items-center gap-2 shadow-sm">
+<span class="material-symbols-outlined text-[18px]">file_download</span>
+                                    Exportar PDF
+                                </button>
+</div>
+</div>
+</div>
+</div>
+<div class="col-span-12 lg:col-span-4 bg-primary-container p-xl rounded-xl text-white flex flex-col justify-between overflow-hidden relative">
+<div class="relative z-10">
+<p class="text-label-bold opacity-80 uppercase tracking-widest mb-1">Antigüedad</p>
+<h2 class="font-h2 text-h2">4 años, 2 meses</h2>
+<p class="text-body-sm opacity-90 mt-4">Próxima revisión salarial en:</p>
+<p class="font-bold text-h3 mt-1">15 días</p>
+</div>
+<div class="absolute -right-8 -bottom-8 opacity-20">
+<span class="material-symbols-outlined text-[160px]">verified_user</span>
+</div>
+</div>
+</div>
+<!-- Detailed Sections -->
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Datos Personales -->
+<section class="col-span-12 md:col-span-6 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<div class="px-lg py-md border-b border-outline-variant bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">person</span>
+<h3 class="font-h3 text-h3">Datos Personales</h3>
+</div>
+<div class="p-lg grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-gutter">
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">DNI / NIE</p>
+<p class="font-body-md text-on-surface font-medium">47883210-K</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">NSS (Seguridad Social)</p>
+<p class="font-body-md text-on-surface font-medium">28 12345678 90</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Fecha de Nacimiento</p>
+<p class="font-body-md text-on-surface font-medium">14/05/1985 (39 años)</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Nacionalidad</p>
+<p class="font-body-md text-on-surface font-medium">Española</p>
+</div>
+<div class="col-span-full">
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Correo Electrónico</p>
+<p class="font-body-md text-primary font-medium">alejandro.garcia@personnelpro.com</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Teléfono Móvil</p>
+<p class="font-body-md text-on-surface font-medium">+34 600 123 456</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Estado Civil</p>
+<p class="font-body-md text-on-surface font-medium">Casado</p>
+</div>
+</div>
+</section>
+<!-- Información Profesional -->
+<section class="col-span-12 md:col-span-6 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+<div class="px-lg py-md border-b border-outline-variant bg-surface-container-low flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">work</span>
+<h3 class="font-h3 text-h3">Información Profesional</h3>
+</div>
+<div class="p-lg grid grid-cols-1 sm:grid-cols-2 gap-y-6 gap-x-gutter">
+<div class="col-span-full">
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Puesto / Rol</p>
+<p class="font-h3 text-on-surface">Director de Operaciones</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Departamento</p>
+<p class="font-body-md text-on-surface font-medium">Operaciones y Estrategia</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Oficina / Sede</p>
+<p class="font-body-md text-on-surface font-medium">Madrid - Castellana</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Tipo de Contrato</p>
+<p class="font-body-md text-on-surface font-medium">Indefinido</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Jornada</p>
+<p class="font-body-md text-on-surface font-medium">Completa (40h/sem)</p>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Responsable Directo</p>
+<div class="flex items-center gap-2 mt-1">
+<img alt="Manager" class="w-6 h-6 rounded-full" data-alt="Small thumbnail profile photo of a female executive with professional attire. She is smiling warmly at the camera with a bright office background. The color palette is composed of soft whites and teals to match the corporate professional theme." src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjZqj1sydKz1ABoWE1Rj0y65ft8WUEauzdIRNpsHt5bO8lDgcaL3dY_brFG8eyrrP_Ea722yrOK_rUstsqIJhfKg-f5j4vHc3_d4UD65jbXJ1qLA-5KXTMj1wy7rvR70K4rmPXXb4MFINfyvYyiqnrdn-7vASbT_a2ov1iJB8Vbh4hjuQ5wCnm5k1oFyooPJwABVtzrvekar0WFtP-cl0xvvallg_4qV0cWwNvVXmdFIMfJi0KqWfHzOrcaPeldXCFAAmo4nDsZXgY"/>
+<span class="font-body-sm font-medium text-primary">Elena Martínez</span>
+</div>
+</div>
+<div>
+<p class="text-label-bold text-slate-500 uppercase tracking-wider mb-1">Fecha de Incorporación</p>
+<p class="font-body-md text-on-surface font-medium">01/02/2020</p>
+</div>
+</div>
+</section>
+<!-- Documentación y Otros (Asymmetric Layout element) -->
+<section class="col-span-12 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden mb-xl">
+<div class="px-lg py-md border-b border-outline-variant bg-surface-container-low flex items-center justify-between">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">folder_open</span>
+<h3 class="font-h3 text-h3">Documentos Recientes</h3>
+</div>
+<button class="text-primary font-button text-button hover:underline">Ver todo</button>
+</div>
+<div class="p-0 overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low border-b border-outline-variant">
+<th class="px-lg py-sm text-label-bold text-slate-500 uppercase">Nombre del Documento</th>
+<th class="px-lg py-sm text-label-bold text-slate-500 uppercase">Categoría</th>
+<th class="px-lg py-sm text-label-bold text-slate-500 uppercase">Fecha</th>
+<th class="px-lg py-sm text-label-bold text-slate-500 uppercase">Estado</th>
+<th class="px-lg py-sm"></th>
+</tr>
+</thead>
+<tbody>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error opacity-70">picture_as_pdf</span>
+<span class="font-body-md font-medium text-on-surface">Contrato_Indefinido_Firmado.pdf</span>
+</div>
+</td>
+<td class="px-lg py-md text-body-sm text-slate-600">Contractual</td>
+<td class="px-lg py-md text-body-sm text-slate-600">01 Feb 2020</td>
+<td class="px-lg py-md">
+<span class="bg-green-50 text-green-700 px-2 py-0.5 rounded text-[11px] font-bold border border-green-200">VERIFICADO</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-slate-400 group-hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+<tr class="border-b border-outline-variant hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-error opacity-70">picture_as_pdf</span>
+<span class="font-body-md font-medium text-on-surface">Nomina_Mayo_2024.pdf</span>
+</div>
+</td>
+<td class="px-lg py-md text-body-sm text-slate-600">Nómina</td>
+<td class="px-lg py-md text-body-sm text-slate-600">30 May 2024</td>
+<td class="px-lg py-md">
+<span class="bg-green-50 text-green-700 px-2 py-0.5 rounded text-[11px] font-bold border border-green-200">VERIFICADO</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-slate-400 group-hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-blue-500 opacity-70">description</span>
+<span class="font-body-md font-medium text-on-surface">Certificado_Formacion_Liderazgo.pdf</span>
+</div>
+</td>
+<td class="px-lg py-md text-body-sm text-slate-600">Formación</td>
+<td class="px-lg py-md text-body-sm text-slate-600">15 Mar 2023</td>
+<td class="px-lg py-md">
+<span class="bg-slate-50 text-slate-500 px-2 py-0.5 rounded text-[11px] font-bold border border-slate-200">PENDIENTE</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-slate-400 group-hover:text-primary"><span class="material-symbols-outlined">download</span></button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</section>
+</div>
+</div>
+</main>
+</body></html>

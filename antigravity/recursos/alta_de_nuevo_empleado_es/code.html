@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-container": "#fdfcff",
+                    "surface-tint": "#005ac2",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#004395",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "primary-container": "#2170e4",
+                    "outline-variant": "#c2c6d6",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary": "#0058be",
+                    "on-surface-variant": "#424754",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#d5e0f8",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#586377",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary": "#4d5d73",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#545f73",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-primary-container": "#fefcff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-container": "#66768d",
+                    "on-background": "#191c1e",
+                    "outline": "#727785",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "sidebar-width": "260px",
+                    "container-margin": "24px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "button": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "500"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h3": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface flex min-h-screen">
+<!-- SideNavBar -->
+<aside class="bg-slate-900 fixed left-0 top-0 bottom-0 w-[260px] border-r border-slate-800 flex flex-col h-full py-6 z-50">
+<div class="px-6 mb-10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 bg-blue-600 rounded-lg flex items-center justify-center text-white">
+<span class="material-symbols-outlined">corporate_fare</span>
+</div>
+<div>
+<h1 class="text-white font-black tracking-wide text-lg leading-tight">Personnel Pro</h1>
+<p class="text-slate-400 text-xs font-sans">Enterprise Admin</p>
+</div>
+</div>
+</div>
+<nav class="flex-1 space-y-1">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span class="font-sans text-[14px]">Dashboard</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="badge">badge</span>
+<span class="font-sans text-[14px]">Directory</span>
+</a>
+<a class="bg-slate-800 text-white border-l-4 border-blue-500 px-4 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined" data-icon="person_add">person_add</span>
+<span class="font-sans text-[14px]">New Hire</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="person_remove">person_remove</span>
+<span class="font-sans text-[14px]">Leavers</span>
+</a>
+</nav>
+<div class="mt-auto border-t border-slate-800 pt-6">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="contact_support">contact_support</span>
+<span class="font-sans text-[14px]">Support</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined" data-icon="logout">logout</span>
+<span class="font-sans text-[14px]">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="ml-[260px] flex-1 flex flex-col min-h-screen">
+<!-- TopNavBar -->
+<header class="bg-white flex justify-between items-center h-16 px-6 border-b border-slate-200 sticky top-0 z-40">
+<div class="flex items-center gap-4 flex-1">
+<div class="relative w-full max-w-md">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400 text-sm">search</span>
+<input class="w-full pl-10 pr-4 py-2 bg-slate-50 border-none rounded-lg text-sm focus:ring-2 focus:ring-blue-500/20 outline-none transition-all" placeholder="Search resources..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-blue-600 rounded-full border-2 border-white"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<div class="h-8 w-[1px] bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<div class="text-right hidden sm:block">
+<p class="text-xs font-bold text-slate-900">HR Admin</p>
+<p class="text-[10px] text-slate-500 uppercase tracking-wider">Administrator</p>
+</div>
+<img alt="Administrator profile photo" class="w-9 h-9 rounded-full object-cover border border-slate-200" data-alt="A professional headshot of a senior HR Administrator with a confident smile, wearing a sharp charcoal suit and white shirt. The background is a blurred high-end corporate office with soft, natural lighting coming from large windows. The overall aesthetic is professional, clean, and trustworthy, aligning with a premium enterprise software interface." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB4PN6jcDmNejN6voKFGgz_rWJ0S8yQPX9qpSKj_Mwhlfk59a73S-J4LP6Ol68xq3l6QkRCs53HflRdctF1BrlIZ9Dl3YdE2-XkY5D1iqRXWoO5_ao-M2MgNw9u_fqEbdNtavpRth7fcAuf8VCILK8jtCjlICiNHAYMRr57h-lJiJynFEIaP0hc__8qbLwRIGCHcXOrSJ4gJigPM04K3ut0kuOlEYJ-UHzrJf3xKqIRvx-Iu1VAiQirUuQBdiQ1IR4Afxi7KZ-Laeav"/>
+</div>
+</div>
+</header>
+<!-- Content Canvas -->
+<div class="p-container-margin flex-1 flex flex-col">
+<div class="mb-8 flex justify-between items-end">
+<div>
+<h2 class="font-h2 text-h2 text-on-surface">Formulario de Alta de Nuevo Empleado</h2>
+<p class="text-body-md text-on-surface-variant mt-1">Complete los datos requeridos para registrar formalmente al nuevo talento en el sistema.</p>
+</div>
+<div class="hidden md:flex gap-2">
+<span class="px-3 py-1 bg-blue-50 text-blue-700 text-label-bold rounded-full border border-blue-100 uppercase">Paso 1 de 1</span>
+</div>
+</div>
+<!-- Bento Form Layout -->
+<form class="grid grid-cols-12 gap-6 items-start">
+<!-- Main Personal Info Card -->
+<div class="col-span-12 lg:col-span-8 space-y-6">
+<div class="bg-surface-container-lowest border border-outline-variant p-xl rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined text-lg">person</span>
+<h3 class="font-h3 text-h3 text-on-surface">Información Personal</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="md:col-span-2">
+<label class="block font-label-bold text-on-surface-variant mb-2">Nombre Completo</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="Ej. Javier Rodríguez Pérez" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">DNI / NIE</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="12345678X" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Fecha de Nacimiento</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" type="date"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Número de Seguridad Social (NSS)</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="XX XXXXXXXX XX" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Género</label>
+<select class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md appearance-none">
+<option disabled="" selected="" value="">Seleccionar...</option>
+<option>Masculino</option>
+<option>Femenino</option>
+<option>No binario / Otro</option>
+</select>
+</div>
+</div>
+</div>
+<!-- Contact Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-xl rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined text-lg">contact_mail</span>
+<h3 class="font-h3 text-h3 text-on-surface">Contacto</h3>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Correo Electrónico</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="javier.r@empresa.es" type="email"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Teléfono</label>
+<div class="flex">
+<span class="inline-flex items-center px-3 rounded-l-lg border border-r-0 border-outline-variant bg-slate-50 text-slate-500 text-sm">+34</span>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-r-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="600 000 000" type="tel"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Side Panel (Position Info) -->
+<div class="col-span-12 lg:col-span-4 space-y-6">
+<div class="bg-surface-container-lowest border border-outline-variant p-xl rounded-xl shadow-sm">
+<div class="flex items-center gap-2 mb-6 text-primary">
+<span class="material-symbols-outlined text-lg">work</span>
+<h3 class="font-h3 text-h3 text-on-surface">Puesto y Organización</h3>
+</div>
+<div class="space-y-6">
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Puesto</label>
+<input class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md" placeholder="Ej. Senior Software Engineer" type="text"/>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Departamento</label>
+<select class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md appearance-none">
+<option disabled="" selected="" value="">Seleccionar departamento...</option>
+<option>Ingeniería</option>
+<option>Recursos Humanos</option>
+<option>Marketing y Ventas</option>
+<option>Finanzas</option>
+<option>Operaciones</option>
+</select>
+</div>
+<div>
+<label class="block font-label-bold text-on-surface-variant mb-2">Tipo de Contrato</label>
+<select class="w-full px-md py-sm bg-white border border-outline-variant rounded-lg focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all text-body-md appearance-none">
+<option>Indefinido</option>
+<option>Temporal</option>
+<option>Prácticas</option>
+<option>Autónomo</option>
+</select>
+</div>
+<div class="pt-4 border-t border-outline-variant">
+<div class="p-md bg-blue-50 border border-blue-100 rounded-lg">
+<div class="flex gap-3">
+<span class="material-symbols-outlined text-blue-600">info</span>
+<div>
+<p class="text-xs font-bold text-blue-900 mb-1">Nota Administrativa</p>
+<p class="text-[11px] text-blue-700 leading-normal">Una vez guardado, se generará automáticamente el perfil en el directorio y se enviará un correo de bienvenida.</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Action Buttons Card -->
+<div class="bg-surface-container-lowest border border-outline-variant p-xl rounded-xl shadow-sm">
+<div class="flex flex-col gap-3">
+<button class="w-full bg-primary text-white font-button text-button py-3 rounded-lg hover:bg-primary-container active:scale-[0.98] transition-all flex items-center justify-center gap-2" type="submit">
+<span class="material-symbols-outlined text-sm">save</span>
+                                Guardar Empleado
+                            </button>
+<button class="w-full bg-white text-on-surface-variant border border-outline-variant font-button text-button py-3 rounded-lg hover:bg-surface-container-low active:scale-[0.98] transition-all" type="button">
+                                Cancelar
+                            </button>
+</div>
+</div>
+<!-- Decorative Graphic -->
+<div class="hidden lg:block relative h-40 rounded-xl overflow-hidden group">
+<img alt="Modern office atmosphere" class="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" data-alt="A cinematic, wide-angle shot of a bright, contemporary corporate office lounge with minimalist white furniture and large glass walls. Soft morning sunlight streams through the windows, creating long shadows and a sense of calm and order. The color palette is composed of soft whites, light grays, and subtle blue accents, embodying the vision of a modern, efficient workplace." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC_oA4W_M7ssJZDAXgj8ZlpFkzwGrPMJSt1Ik9rCwkFGmkwDzO4qInbz57avCcsyqRTcw7E9r2rLFtF3ahiEY6uTmIztVmY9myCmpIMXB6T_lj1BCQcCFhCMevBhaSDmrAngz5fUEeF5K-JGyN6Vr6PA5dTlB5uBzQ-nU3GtFUCQwIevKgCmCusDDAQCuhChAJ0hz_vwSYmbRMD_S4aDdJlIqKZB7iL0Gvm6plskwJYPJku8k3vTbX_4sRsiBUnbvKyvCbtJ-NMXgb1"/>
+<div class="absolute inset-0 bg-gradient-to-t from-slate-900/60 to-transparent flex items-end p-4">
+<p class="text-white text-[11px] font-medium italic">"Construyendo el futuro de nuestra organización equipo a equipo."</p>
+</div>
+</div>
+</div>
+</form>
+</div>
+<!-- Footer Footer (Simple) -->
+<footer class="h-12 border-t border-slate-200 px-container-margin flex items-center justify-between text-[11px] text-slate-400">
+<div>© 2024 Personnel Pro Enterprise. Reservados todos los derechos.</div>
+<div class="flex gap-4">
+<a class="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
+<a class="hover:text-primary transition-colors" href="#">Términos de Servicio</a>
+</div>
+</footer>
+</main>
+</body></html>

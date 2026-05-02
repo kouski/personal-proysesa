@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-highest": "#e0e3e5",
+                    "surface": "#f7f9fb",
+                    "secondary-fixed-dim": "#bcc7de",
+                    "surface-container": "#eceef0",
+                    "on-tertiary-container": "#fdfcff",
+                    "surface-tint": "#005ac2",
+                    "surface-container-low": "#f2f4f6",
+                    "surface-container-high": "#e6e8ea",
+                    "tertiary-fixed": "#d3e4fe",
+                    "surface-bright": "#f7f9fb",
+                    "on-primary-fixed-variant": "#004395",
+                    "tertiary-fixed-dim": "#b7c8e1",
+                    "primary-container": "#2170e4",
+                    "outline-variant": "#c2c6d6",
+                    "primary-fixed-dim": "#adc6ff",
+                    "primary": "#0058be",
+                    "on-surface-variant": "#424754",
+                    "surface-dim": "#d8dadc",
+                    "secondary-fixed": "#d8e3fb",
+                    "on-secondary": "#ffffff",
+                    "on-tertiary": "#ffffff",
+                    "secondary-container": "#d5e0f8",
+                    "on-error": "#ffffff",
+                    "inverse-primary": "#adc6ff",
+                    "on-tertiary-fixed-variant": "#38485d",
+                    "on-error-container": "#93000a",
+                    "on-secondary-container": "#586377",
+                    "inverse-on-surface": "#eff1f3",
+                    "tertiary": "#4d5d73",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-fixed": "#0b1c30",
+                    "surface-variant": "#e0e3e5",
+                    "secondary": "#545f73",
+                    "on-secondary-fixed-variant": "#3c475a",
+                    "on-primary-container": "#fefcff",
+                    "primary-fixed": "#d8e2ff",
+                    "on-primary-fixed": "#001a42",
+                    "tertiary-container": "#66768d",
+                    "on-background": "#191c1e",
+                    "outline": "#727785",
+                    "inverse-surface": "#2d3133",
+                    "background": "#f7f9fb",
+                    "surface-container-lowest": "#ffffff",
+                    "on-secondary-fixed": "#111c2d",
+                    "on-surface": "#191c1e",
+                    "error": "#ba1a1a",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "sm": "8px",
+                    "sidebar-width": "260px",
+                    "container-margin": "24px",
+                    "lg": "24px",
+                    "gutter": "20px",
+                    "xl": "32px",
+                    "xs": "4px",
+                    "unit": "4px",
+                    "md": "16px"
+            },
+            "fontFamily": {
+                    "h2": ["Inter"],
+                    "body-md": ["Inter"],
+                    "h1": ["Inter"],
+                    "button": ["Inter"],
+                    "label-bold": ["Inter"],
+                    "h3": ["Inter"],
+                    "body-sm": ["Inter"],
+                    "body-lg": ["Inter"]
+            },
+            "fontSize": {
+                    "h2": ["24px", {"lineHeight": "32px", "letterSpacing": "-0.01em", "fontWeight": "600"}],
+                    "body-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "h1": ["30px", {"lineHeight": "38px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "button": ["14px", {"lineHeight": "20px", "letterSpacing": "0", "fontWeight": "500"}],
+                    "label-bold": ["12px", {"lineHeight": "16px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "h3": ["20px", {"lineHeight": "28px", "letterSpacing": "0", "fontWeight": "600"}],
+                    "body-sm": ["13px", {"lineHeight": "18px", "letterSpacing": "0", "fontWeight": "400"}],
+                    "body-lg": ["16px", {"lineHeight": "24px", "letterSpacing": "0", "fontWeight": "400"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Inter', sans-serif; }
+    </style>
+</head>
+<body class="bg-surface text-on-surface">
+<!-- SideNavBar (Authority: JSON) -->
+<aside class="fixed left-0 top-0 bottom-0 w-[260px] bg-slate-900 border-r border-slate-800 flex flex-col h-full py-6">
+<div class="px-6 mb-8">
+<h1 class="text-white font-black tracking-wide text-lg">Personnel Pro</h1>
+<p class="text-slate-400 text-xs uppercase tracking-widest mt-1">Enterprise Admin</p>
+</div>
+<nav class="flex-1 flex flex-col gap-1">
+<!-- Labels from JSON mapped to Spanish view intent. 'Leavers' is the active tab. -->
+<a class="text-slate-400 px-6 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">badge</span>
+<span class="font-sans text-[14px]">Directory</span>
+</a>
+<a class="text-slate-400 px-6 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-sans text-[14px]">Profile</span>
+</a>
+<a class="text-slate-400 px-6 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">person_add</span>
+<span class="font-sans text-[14px]">New Hire</span>
+</a>
+<a class="bg-slate-800 text-white border-l-4 border-blue-500 px-6 py-3 flex items-center gap-3" href="#">
+<span class="material-symbols-outlined">person_remove</span>
+<span class="font-sans text-[14px]">Leavers</span>
+</a>
+</nav>
+<div class="mt-auto px-2 flex flex-col gap-1">
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">contact_support</span>
+<span class="font-sans text-[14px]">Support</span>
+</a>
+<a class="text-slate-400 px-4 py-3 flex items-center gap-3 hover:bg-slate-800/50 hover:text-white transition-all" href="#">
+<span class="material-symbols-outlined">logout</span>
+<span class="font-sans text-[14px]">Sign Out</span>
+</a>
+</div>
+</aside>
+<!-- TopNavBar (Authority: JSON) -->
+<header class="flex justify-between items-center h-16 px-6 ml-[260px] bg-white border-b border-slate-200">
+<div class="flex items-center gap-4">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-slate-400">search</span>
+<input class="pl-10 pr-4 py-2 bg-slate-50 border-none rounded-lg text-sm focus:ring-2 focus:ring-primary w-64 transition-all" placeholder="Buscar empleados..." type="text"/>
+</div>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors relative">
+<span class="material-symbols-outlined">notifications</span>
+<span class="absolute top-2 right-2 w-2 h-2 bg-error rounded-full"></span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">help</span>
+</button>
+<button class="p-2 text-slate-500 hover:bg-slate-50 rounded-full transition-colors">
+<span class="material-symbols-outlined">settings</span>
+</button>
+<div class="h-8 w-px bg-slate-200 mx-2"></div>
+<div class="flex items-center gap-3">
+<span class="font-sans text-sm font-medium tracking-tight text-slate-900">Admin Juan</span>
+<img alt="Administrator profile photo" class="w-8 h-8 rounded-full border border-slate-200" data-alt="A professional headshot of a corporate administrator in a bright, modern office setting. The lighting is soft and high-key, creating a clean light-mode aesthetic. The subject is wearing a professional navy suit and has a neutral, confident expression. The background is slightly blurred, showing a minimalist workplace with glass partitions and soft gray tones." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDaVXkdixiVxUEozGfkGN5Rpg0rc0t01DKMyrpWXwniklMt319s0Ly8JeeXkJlzGMNM8zLZGD46h6vbqByJpvmDdpJHHIUaR5MgrN2_TEpdNEo9kmgVRlU_ksD3963tNkQEE1xOxCt5ip1z-VPw_QzIkx6jLEtIQzplpoZyqfKyumIg2Qad5mWtY6S0u7dHNKOPdRkiTnrpu_YIZXo2vHO2VXJ1GwQ7-tRmon5hdkYTwjFIV_DDkQPOC12VIFWNPmRJyWsYIJOMN26p"/>
+</div>
+</div>
+</header>
+<!-- Main Content -->
+<main class="ml-[260px] p-container-margin">
+<header class="mb-xl">
+<h2 class="font-h1 text-h1 text-on-surface">Gestión de Bajas</h2>
+<p class="font-body-md text-body-md text-on-surface-variant mt-sm">Procesar salidas de personal y monitorizar registros históricos.</p>
+</header>
+<div class="grid grid-cols-12 gap-gutter">
+<!-- Left Side: Tramitar Baja Form -->
+<section class="col-span-12 lg:col-span-5">
+<div class="bg-surface-container-lowest border border-outline-variant p-lg rounded-xl shadow-sm">
+<div class="flex items-center gap-3 mb-lg">
+<div class="bg-primary-container/10 p-2 rounded-lg">
+<span class="material-symbols-outlined text-primary">person_remove</span>
+</div>
+<h3 class="font-h3 text-h3 text-on-surface">Tramitar Baja</h3>
+</div>
+<form class="space-y-md">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Empleado</label>
+<select class="w-full bg-white border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Seleccionar empleado...</option>
+<option>Carlos Mendoza (Ingeniería)</option>
+<option>Ana García (Marketing)</option>
+<option>Luis Rodríguez (Ventas)</option>
+</select>
+</div>
+<div class="grid grid-cols-2 gap-md">
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Fecha de Salida</label>
+<input class="w-full bg-white border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-primary" type="date"/>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Tipo de Baja</label>
+<select class="w-full bg-white border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-primary">
+<option>Voluntaria</option>
+<option>Despido</option>
+<option>Fin de Contrato</option>
+<option>Excedencia</option>
+</select>
+</div>
+</div>
+<div>
+<label class="block font-label-bold text-label-bold text-on-surface-variant mb-xs">Motivo de la Baja</label>
+<textarea class="w-full bg-white border border-outline-variant rounded-lg p-md text-body-md focus:ring-2 focus:ring-primary focus:border-primary resize-none" placeholder="Describa brevemente el motivo..." rows="4"></textarea>
+</div>
+<div class="flex items-center gap-3 p-md bg-surface-container rounded-lg">
+<input class="rounded border-outline-variant text-primary focus:ring-primary" id="assets" type="checkbox"/>
+<label class="font-body-sm text-body-sm text-on-surface" for="assets">Confirmar devolución de equipo corporativo</label>
+</div>
+<button class="w-full bg-primary text-on-primary font-button text-button py-3 rounded-lg hover:opacity-90 transition-all flex justify-center items-center gap-2 mt-md" type="submit">
+<span class="material-symbols-outlined text-[20px]">check_circle</span>
+                            Confirmar Procesamiento
+                        </button>
+</form>
+</div>
+</section>
+<!-- Right Side: Bajas Recientes Table -->
+<section class="col-span-12 lg:col-span-7">
+<div class="bg-surface-container-lowest border border-outline-variant rounded-xl shadow-sm flex flex-col h-full">
+<div class="p-lg border-b border-outline-variant flex justify-between items-center">
+<h3 class="font-h3 text-h3 text-on-surface">Bajas Recientes</h3>
+<div class="flex gap-2">
+<button class="px-3 py-1.5 border border-outline-variant rounded-lg text-body-sm font-button hover:bg-surface transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">filter_list</span>
+                                Filtrar
+                            </button>
+<button class="px-3 py-1.5 border border-outline-variant rounded-lg text-body-sm font-button hover:bg-surface transition-colors flex items-center gap-2">
+<span class="material-symbols-outlined text-[18px]">download</span>
+                                Exportar
+                            </button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-lg py-md font-label-bold text-label-bold text-on-surface-variant uppercase">Empleado</th>
+<th class="px-lg py-md font-label-bold text-label-bold text-on-surface-variant uppercase">Fecha</th>
+<th class="px-lg py-md font-label-bold text-label-bold text-on-surface-variant uppercase">Motivo</th>
+<th class="px-lg py-md font-label-bold text-label-bold text-on-surface-variant uppercase">Estado</th>
+<th class="px-lg py-md"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant">
+<tr class="hover:bg-surface transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-slate-200 flex items-center justify-center font-bold text-xs text-slate-600">SM</div>
+<div>
+<p class="font-body-md text-body-md font-semibold">Sofia Martínez</p>
+<p class="text-[11px] text-on-surface-variant">Diseño UI/UX</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md font-body-sm text-body-sm">12 Oct 2023</td>
+<td class="px-lg py-md font-body-sm text-body-sm">Voluntaria</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-green-100 text-green-700">Completado</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-blue-100 flex items-center justify-center font-bold text-xs text-blue-600">JP</div>
+<div>
+<p class="font-body-md text-body-md font-semibold">Javier Pérez</p>
+<p class="text-[11px] text-on-surface-variant">Backend Dev</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md font-body-sm text-body-sm">05 Oct 2023</td>
+<td class="px-lg py-md font-body-sm text-body-sm">Fin Contrato</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-amber-100 text-amber-700">Pendiente IT</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-purple-100 flex items-center justify-center font-bold text-xs text-purple-600">LV</div>
+<div>
+<p class="font-body-md text-body-md font-semibold">Lucía Valencia</p>
+<p class="text-[11px] text-on-surface-variant">Recursos Humanos</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md font-body-sm text-body-sm">28 Sep 2023</td>
+<td class="px-lg py-md font-body-sm text-body-sm">Voluntaria</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-green-100 text-green-700">Completado</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<tr class="hover:bg-surface transition-colors">
+<td class="px-lg py-md">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-red-100 flex items-center justify-center font-bold text-xs text-red-600">RB</div>
+<div>
+<p class="font-body-md text-body-md font-semibold">Ricardo Blanco</p>
+<p class="text-[11px] text-on-surface-variant">Soporte Técnico</p>
+</div>
+</div>
+</td>
+<td class="px-lg py-md font-body-sm text-body-sm">15 Sep 2023</td>
+<td class="px-lg py-md font-body-sm text-body-sm">Despido</td>
+<td class="px-lg py-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full text-[11px] font-bold bg-green-100 text-green-700">Completado</span>
+</td>
+<td class="px-lg py-md text-right">
+<button class="text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Footer Pagination -->
+<div class="mt-auto p-md border-t border-outline-variant flex justify-between items-center bg-surface-container-lowest">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Mostrando 1-4 de 24 registros</span>
+<div class="flex gap-2">
+<button class="p-1.5 border border-outline-variant rounded-lg hover:bg-surface text-on-surface-variant disabled:opacity-50" disabled="">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="p-1.5 border border-outline-variant rounded-lg hover:bg-surface text-on-surface-variant">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+<!-- Secondary Information / Process Summary -->
+<section class="mt-xl grid grid-cols-1 md:grid-cols-3 gap-gutter">
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-3 mb-sm">
+<span class="material-symbols-outlined text-primary">analytics</span>
+<h4 class="font-label-bold text-label-bold text-on-surface uppercase">Tasa de Rotación</h4>
+</div>
+<p class="font-h2 text-h2 text-on-surface">3.4%</p>
+<p class="font-body-sm text-body-sm text-green-600 mt-xs">↓ 0.2% vs mes anterior</p>
+</div>
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-3 mb-sm">
+<span class="material-symbols-outlined text-primary">warning</span>
+<h4 class="font-label-bold text-label-bold text-on-surface uppercase">Bajas Pendientes</h4>
+</div>
+<p class="font-h2 text-h2 text-on-surface">5</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Requieren acción administrativa</p>
+</div>
+<div class="p-lg bg-surface-container-low rounded-xl border border-outline-variant">
+<div class="flex items-center gap-3 mb-sm">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<h4 class="font-label-bold text-label-bold text-on-surface uppercase">Media de Preaviso</h4>
+</div>
+<p class="font-h2 text-h2 text-on-surface">18 días</p>
+<p class="font-body-sm text-body-sm text-on-surface-variant mt-xs">Basado en últimos 3 meses</p>
+</div>
+</section>
+</main>
+</body></html>
