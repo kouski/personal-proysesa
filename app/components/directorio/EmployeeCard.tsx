@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export type EmployeeStatus = "activo" | "remoto" | "vacaciones" | "inactivo";
 
 export interface Employee {
@@ -40,7 +42,10 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
     const status = statusConfig[employee.status];
 
     return (
-        <article className="bg-white border border-slate-200 rounded-2xl px-8 py-8 hover:border-blue-300 hover:shadow-md transition-all duration-300 group cursor-pointer flex flex-col h-full">
+        <Link
+            href="/perfil"
+            className="bg-white border border-slate-200 rounded-2xl px-8 py-8 hover:border-blue-300 hover:shadow-md transition-all duration-300 group cursor-pointer flex flex-col h-full block"
+        >
             {/* Top row: avatar + status badge */}
             <div className="flex justify-between items-start mb-5">
                 {employee.photo ? (
@@ -95,6 +100,6 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
                     <span className="text-[13px]">{employee.phone}</span>
                 </div>
             </div>
-        </article>
+        </Link>
     );
 }
