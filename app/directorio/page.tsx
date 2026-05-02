@@ -91,7 +91,7 @@ export default async function DirectorioPage({ searchParams }: { searchParams: P
                                 person_add
                             </span>
                             <p className="text-slate-400 text-sm font-medium">
-                                Hueco para nuevo talento
+                                Hueco para nuevo empleado
                             </p>
                         </div>
                     </div>
