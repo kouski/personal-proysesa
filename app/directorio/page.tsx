@@ -5,8 +5,21 @@ import EmployeeCard from "@/app/components/directorio/EmployeeCard";
 import { employees } from "@/app/data/employees";
 import Link from "next/link";
 
-export default function DirectorioPage() {
-    const total = employees.length;
+export default async function DirectorioPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | undefined }> }) {
+    const resolvedParams = await searchParams;
+    const { departamento, estado } = resolvedParams;
+
+    let filteredEmployees = employees;
+
+    if (departamento) {
+        filteredEmployees = filteredEmployees.filter(emp => emp.department === departamento);
+    }
+
+    if (estado) {
+        filteredEmployees = filteredEmployees.filter(emp => emp.status === estado);
+    }
+
+    const total = filteredEmployees.length;
 
     return (
         <div className="min-h-screen bg-[#f7f9fb]">
@@ -58,7 +71,7 @@ export default function DirectorioPage() {
 
                     {/* Employee grid */}
                     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
-                        {employees.map((emp) => (
+                        {filteredEmployees.map((emp) => (
                             <EmployeeCard key={emp.id} employee={emp} />
                         ))}
 
