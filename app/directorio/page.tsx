@@ -7,7 +7,7 @@ import Link from "next/link";
 
 export default async function DirectorioPage({ searchParams }: { searchParams: Promise<{ [key: string]: string | undefined }> }) {
     const resolvedParams = await searchParams;
-    const { departamento, estado } = resolvedParams;
+    const { departamento, estado, q } = resolvedParams;
 
     let filteredEmployees = employees;
 
@@ -17,6 +17,16 @@ export default async function DirectorioPage({ searchParams }: { searchParams: P
 
     if (estado) {
         filteredEmployees = filteredEmployees.filter(emp => emp.status === estado);
+    }
+
+    if (q) {
+        const query = q.toLowerCase();
+        filteredEmployees = filteredEmployees.filter(emp =>
+            emp.name.toLowerCase().includes(query) ||
+            emp.role.toLowerCase().includes(query) ||
+            emp.department.toLowerCase().includes(query) ||
+            (emp.dni && emp.dni.toLowerCase().includes(query))
+        );
     }
 
     const total = filteredEmployees.length;
