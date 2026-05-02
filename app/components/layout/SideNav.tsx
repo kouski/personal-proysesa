@@ -3,7 +3,7 @@ import Link from "next/link";
 const navItems = [
     { href: "/directorio", icon: "badge", label: "Directorio", active: true },
     { href: "/perfil", icon: "person", label: "Perfil", active: false },
-    { href: "/nuevo", icon: "person_add", label: "Nuevo empleado", active: false },
+    { href: "/directorio/nuevo", icon: "person_add", label: "Nuevo empleado", active: false },
     { href: "/bajas", icon: "person_remove", label: "Bajas", active: false },
 ];
 

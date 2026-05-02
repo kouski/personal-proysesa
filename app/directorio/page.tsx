@@ -3,6 +3,7 @@ import TopBar from "@/app/components/layout/TopBar";
 import FilterBar from "@/app/components/directorio/FilterBar";
 import EmployeeCard from "@/app/components/directorio/EmployeeCard";
 import { employees } from "@/app/data/employees";
+import Link from "next/link";
 
 export default function DirectorioPage() {
     const total = employees.length;
@@ -41,12 +42,15 @@ export default function DirectorioPage() {
                             </p>
                         </div>
 
-                        <button className="bg-blue-600 text-white text-[14px] font-medium px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-sm active:scale-95 duration-150">
+                        <Link
+                            href="/directorio/nuevo"
+                            className="bg-blue-600 text-white text-[14px] font-medium px-5 py-2.5 rounded-lg flex items-center gap-2 hover:bg-blue-700 transition-colors shadow-sm active:scale-95 duration-150"
+                        >
                             <span className="material-symbols-outlined text-[18px]">
                                 person_add
                             </span>
                             Añadir empleado
-                        </button>
+                        </Link>
                     </div>
 
                     {/* Filter bar */}
