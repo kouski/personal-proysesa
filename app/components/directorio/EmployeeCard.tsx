@@ -14,6 +14,20 @@ export interface Employee {
     initials: string;
     avatarBg?: string;
     photo?: string;
+
+    // Extended profile fields
+    dni?: string;
+    nss?: string;
+    birthDate?: string;
+    nationality?: string;
+    civilStatus?: string;
+    office?: string;
+    contractType?: string;
+    workSchedule?: string;
+    manager?: string;
+    managerPhoto?: string;
+    joinDate?: string;
+    seniority?: string;
 }
 
 const statusConfig: Record<
@@ -43,7 +57,7 @@ export default function EmployeeCard({ employee }: { employee: Employee }) {
 
     return (
         <Link
-            href="/perfil"
+            href={`/perfil/${employee.id}`}
             className="bg-white border border-slate-200 rounded-2xl px-8 py-8 hover:border-blue-300 hover:shadow-md transition-all duration-300 group cursor-pointer flex flex-col h-full block"
         >
             {/* Top row: avatar + status badge */}
